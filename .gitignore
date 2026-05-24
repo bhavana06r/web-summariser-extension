@@ -1,0 +1,18 @@
+# Node modules - never upload
+node_modules/
+backend/node_modules/
+
+# Secret API keys - never upload
+.env
+backend/.env
+
+# Package lock files
+package-lock.json
+backend/package-lock.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/

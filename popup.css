@@ -1,0 +1,19 @@
+body {
+  width: 350px;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+}
+button {
+  background: #4F46E5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+#summary {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
