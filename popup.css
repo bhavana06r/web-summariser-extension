@@ -2,8 +2,48 @@ body {
   width: 350px;
   padding: 16px;
   font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+  transition: all 0.3s ease;
 }
-button {
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #1F2937;
+  color: #F9FAFB;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h2 {
+  color: #4F46E5;
+  margin: 0;
+}
+
+body.dark h2 {
+  color: #818CF8;
+}
+
+#darkModeBtn {
+  background: none;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body.dark #darkModeBtn {
+  border-color: #4B5563;
+  background: #374151;
+}
+
+#summarizeBtn {
   background: #4F46E5;
   color: white;
   border: none;
@@ -11,9 +51,47 @@ button {
   border-radius: 8px;
   cursor: pointer;
   width: 100%;
+  font-size: 15px;
 }
+
+#summarizeBtn:hover {
+  background: #4338CA;
+}
+
+#loading {
+  margin-top: 12px;
+  text-align: center;
+  color: #6B7280;
+  font-size: 14px;
+}
+
 #summary {
   margin-top: 12px;
   font-size: 14px;
   line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+#copyBtn {
+  margin-top: 10px;
+  background: #10B981;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+}
+
+#copyBtn:hover {
+  background: #059669;
+}
+
+#copyMsg {
+  margin-top: 8px;
+  text-align: center;
+  color: #10B981;
+  font-size: 13px;
+  font-weight: bold;
 }
