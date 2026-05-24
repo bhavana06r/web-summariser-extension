@@ -1,16 +1,14 @@
 // Dark Mode Logic
 const darkModeBtn = document.getElementById('darkModeBtn');
 
-// Check if dark mode was saved before
 if (localStorage.getItem('darkMode') === 'enabled') {
   document.body.classList.add('dark');
   darkModeBtn.innerText = '☀️';
 }
 
-// Toggle dark mode on button click
 darkModeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  
+
   if (document.body.classList.contains('dark')) {
     darkModeBtn.innerText = '☀️';
     localStorage.setItem('darkMode', 'enabled');
@@ -26,6 +24,9 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
   document.getElementById('summary').innerText = '';
   document.getElementById('copyBtn').style.display = 'none';
   document.getElementById('copyMsg').style.display = 'none';
+
+  // Get selected language
+  const language = document.getElementById('languageSelect').value;
 
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -47,7 +48,10 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
         const res = await fetch('http://localhost:3000/summarize', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: response.text })
+          body: JSON.stringify({ 
+            text: response.text,
+            language: language
+          })
         });
 
         const data = await res.json();

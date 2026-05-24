@@ -9,8 +9,8 @@ app.use(express.json());
 
 app.post('/summarize', async (req, res) => {
   try {
-    const { text } = req.body;
-    const summary = await getSummary(text);
+    const { text, language } = req.body;
+    const summary = await getSummary(text, language);
     res.json({ summary });
   } catch (error) {
     console.error('Error:', error.message);

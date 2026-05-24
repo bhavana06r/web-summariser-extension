@@ -7,7 +7,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Dark Mode Styles */
 body.dark {
   background-color: #1F2937;
   color: #F9FAFB;
@@ -41,6 +40,39 @@ body.dark h2 {
 body.dark #darkModeBtn {
   border-color: #4B5563;
   background: #374151;
+}
+
+/* Language Selector */
+.language-selector {
+  margin-bottom: 12px;
+}
+
+.language-selector label {
+  font-size: 13px;
+  color: #6B7280;
+  display: block;
+  margin-bottom: 4px;
+}
+
+body.dark .language-selector label {
+  color: #9CA3AF;
+}
+
+#languageSelect {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #D1D5DB;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #111827;
+  cursor: pointer;
+}
+
+body.dark #languageSelect {
+  background-color: #374151;
+  color: #F9FAFB;
+  border-color: #4B5563;
 }
 
 #summarizeBtn {
