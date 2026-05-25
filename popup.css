@@ -42,7 +42,6 @@ body.dark #darkModeBtn {
   background: #374151;
 }
 
-/* Language Selector */
 .language-selector {
   margin-bottom: 12px;
 }
@@ -104,26 +103,62 @@ body.dark #languageSelect {
   white-space: pre-wrap;
 }
 
-#copyBtn {
+/* Action Buttons */
+#actionBtns {
+  display: flex;
+  gap: 6px;
   margin-top: 10px;
+}
+
+#copyBtn {
   background: #10B981;
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 8px;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
-  font-size: 14px;
+  width: 33%;
+  font-size: 13px;
 }
 
 #copyBtn:hover {
   background: #059669;
 }
 
-#copyMsg {
+#readAloudBtn {
+  background: #F59E0B;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 33%;
+  font-size: 13px;
+}
+
+#readAloudBtn:hover {
+  background: #D97706;
+}
+
+#pdfBtn {
+  background: #EF4444;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 33%;
+  font-size: 13px;
+}
+
+#pdfBtn:hover {
+  background: #DC2626;
+}
+
+#copyMsg, #pdfMsg {
   margin-top: 8px;
   text-align: center;
-  color: #10B981;
   font-size: 13px;
   font-weight: bold;
+  color: #10B981;
 }
